@@ -5,6 +5,8 @@ import {
   Routes,
   Link
 } from "react-router-dom";
+import {RssParser} from "./components/rss-parser/rss-parser";
+
 
 export default function App() {
   return (
@@ -19,6 +21,9 @@ export default function App() {
               <Link to="/about">About</Link>
             </li>
             <li>
+              <Link to="/rss">Rss</Link>
+            </li>
+            <li>
               <Link to="/users">Users</Link>
             </li>
           </ul>
@@ -30,6 +35,7 @@ export default function App() {
           <Route path="/about">
             ABOUT
           </Route>
+          <Route path="/rss" element={<RssParser/>}/>
           <Route path="/users">
             USERS
           </Route>
